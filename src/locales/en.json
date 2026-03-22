@@ -1,0 +1,147 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "experience": "Experience",
+    "background": "Background",
+    "contacts": "Contacts"
+  },
+  "HomePage": {
+    "title": "Hello,",
+    "line_1": "I am Dmytro Kotykhin",
+    "line_2": "Full Stack Developer",
+    "button": "See Who I am"
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "backHome": "Go back home"
+  },
+  "AboutMe": {
+    "title": "About Me",
+    "description": "I am a passionate software developer with 5+ years of experience in building scalable web applications and microservice-based systems using modern technologies. I enjoy learning new programming languages and frameworks, and I am always looking for opportunities to improve my skills and contribute to exciting projects.",
+    "viewCV": "View CV",
+    "downloadCV": "Download CV",
+    "name": "Dmytro Kotykhin",
+    "position": "Senior Full Stack Developer",
+    "location": "Warsaw, Poland"
+  },
+  "Skills": {
+    "title": "Skills",
+    "description": "Here are some of the technologies and tools I am proficient in:",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "other": "Other"
+  },
+  "Experience": {
+    "title": "Experience",
+    "position_1": "Full Stack Developer",
+    "position_2": "Frontend Developer",
+    "tech_stack": "Tech Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "results": "Results",
+    "recommendations": "Recommendations",
+    "view_recommendation": "View Recommendation",
+    "examples": "Examples",
+    "job_1": {
+      "results": [
+        "Led development of core features for a high-traffic marketplace platform SkinSwap",
+        "Designed and implemented real-time trading flows using WebSockets",
+        "Integrated 2 external payment providers, enabling new transaction channels",
+        "Implemented localized Chinese marketplace version with adapted payment flows",
+        "Contributed to microservice architecture for marketplace services",
+        "Delivered 100+ production features across trading, payments, and gamification systems",
+        "Fully implemented quiz flow for Studybooster educational project"
+      ]
+    },
+    "job_2": {
+      "results": [
+        "Delivered 2 production-ready commercial platforms",
+        "Developed 20+ features for internal CRM system used by 100+ employees",
+        "Implemented gRPC communication between microservices",
+        "Optimized frontend performance, reducing load times by 30%",
+        "Collaborated with cross-functional teams to define and implement new features",
+        "Maintained and improved existing codebase, ensuring high code quality and reliability"
+      ]
+    },
+    "job_3": {
+      "results": [
+        "Delivered 10+ production web applications",
+        "Designed GraphQL APIs using Apollo Server and integrated them with frontend applications",
+        "Integrated Stripe payment processing into e-commerce platforms, enabling secure transactions",
+        "Deployed and maintained applications on AWS infrastructure, utilizing services such as EC2, S3, and RDS"
+      ]
+    },
+    "job_4": {
+      "results": [
+        "Developed and maintained Salesforce applications using Apex, Visualforce, and Lightning components",
+        "Implemented custom Salesforce Lightning components using Aura and LWC frameworks"
+      ]
+    },
+    "job_5": {
+      "results": [
+        "Delivered 5 commercial projects using JavaScript and Tilda platform",
+        "Implemented custom JavaScript solutions to enhance functionality and user experience of Tilda-based websites"
+      ]
+    }
+  },
+  "Background": {
+    "title": "Background",
+    "certificates": {
+      "title": "My Certificates",
+      "cert_1": "JavaScript + React. Full course",
+      "cert_2": "React + NextJS 13. TypeScript, Hooks, SSR and Grid",
+      "cert_3": "Modern TypeScript. Full course",
+      "cert_4": "Node JS - basics and application architecture",
+      "cert_5": "Node JS. Practical course. MongoDB, GraphQL, MySQL, Express",
+      "cert_6": "Nest JS - modern backend on TypeScript and Node JS",
+      "cert_7": "NestJS Microservices: Build & Deploy a Scalable Backend",
+      "cert_8": "English for IT (B2)"
+    },
+    "education": {
+      "title": "My Education",
+      "name": "National University of Radio Electronics, Kharkiv, Ukraine.",
+      "degree": "Master Degree in Electrical Engineering (1991-1996)."
+    },
+    "languages": {
+      "title": "Languages",
+      "language1": "Ukrainian (native)",
+      "language2": "Russian (native)",
+      "language3": "English (B2)",
+      "language4": "Polish (A2)"
+    },
+    "hobbies": {
+      "title": "My Hobbies",
+      "hobby1": " Learned programming ATmega8 and STM32 microcontrollers. I also have experience with Arduino and Raspberry Pi, which I used for various projects, including home automation and robotics.",
+      "hobby2": "Interested in radio electronics and have built several amateur radio projects.",
+      "hobby3": "In my free time, I enjoy riding my bike. I also have a passion for photography and love capturing moments from my travels around the world."
+    }
+  },
+  "Contacts": {
+    "title": "Contacts",
+    "form": {
+      "title": "Contact Me",
+      "name": "your name...",
+      "email": "your email...",
+      "message": "your message...",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred while sending your message. Please try again later."
+    },
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "nameMax": "Name must be less than 50 characters",
+      "emailInvalid": "Invalid email address",
+      "messageMin": "Message must be at least 10 characters",
+      "messageMax": "Message must be less than 500 characters"
+    }
+  },
+  "Footer": {
+    "text": "Dmytro Kotykhin. All rights reserved."
+  },
+  "pageTitle": "Dmytro Kotykhin - Portfolio"
+}

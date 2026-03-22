@@ -1,0 +1,21 @@
+@layer utilities {
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hover {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+@theme {
+  --color-background: #131416;
+  --color-orange: #dc965a;
+  --color-grey: #1c1d24;
+  --color-dark: #0e0f10;
+  --color-antiqueWhite: #faebd7;
+  --color-lightGray: #808080;
+}
