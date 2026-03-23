@@ -17,6 +17,10 @@ const router = createRouter({
   ],
 })
 
+router.afterEach((to) => {
+  window.gtag?.('event', 'page_view', { page_path: to.fullPath })
+})
+
 router.beforeEach((to: RouteLocationNormalized) => {
   const locale = (to.params.locale as string) || 'en'
   i18n.global.locale.value = locale as 'en' | 'ua'
