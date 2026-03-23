@@ -1,12 +1,10 @@
 <template>
-  <section id="home" class="min-h-screen flex items-center justify-center pt-16"
+  <section id="home" aria-label="Hero" class="min-h-screen flex items-center justify-center pt-16"
     :style="{ backgroundImage: `url(${bgImage})` }">
     <div class="flex flex-col gap-12 items-center sm:items-start w-full max-w-308 mx-auto px-4 md:px-8 bg-transparent">
-      <p class="fade-in stagger-1 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold mb-14 text-antiqueWhite">
-        {{ t('title') }}
-      </p>
       <h1
         class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-center sm:text-start mb-12 text-antiqueWhite leading-20">
+        <span class="fade-in stagger-1 block pb-14">{{ t('title') }}</span>
         <span class="fade-in stagger-2">{{ t('line_1') }}</span>
         <br />
         <span class="fade-in stagger-3 text-orange">{{ t('line_2') }}</span>

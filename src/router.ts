@@ -5,7 +5,6 @@ import NotFoundPage from './pages/NotFoundPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
-  scrollBehavior: () => ({ top: 0 }),
   routes: [
     {
       path: '/:locale(en|ua)?',
@@ -22,6 +21,7 @@ router.beforeEach((to: RouteLocationNormalized) => {
   const locale = (to.params.locale as string) || 'en'
   i18n.global.locale.value = locale as 'en' | 'ua'
   document.title = i18n.global.t('pageTitle')
+  return true
 })
 
 export default router
