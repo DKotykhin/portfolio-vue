@@ -1,0 +1,11 @@
+customHeaders:
+  - pattern: '**/*.avif'
+    headers:
+      - key: 'Content-Type'
+        value: 'image/avif'
+  - pattern: '**/*.pdf'
+    headers:
+      - key: 'Content-Type'
+        value: 'application/pdf'
+      - key: 'Content-Disposition'
+        value: 'attachment'
