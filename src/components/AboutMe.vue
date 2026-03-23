@@ -5,7 +5,7 @@
       <div class="flex flex-col gap-10 lg:gap-0 lg:flex-row items-center lg:items-stretch lg:justify-between">
         <img :src="photo" alt="Dmytro Kotykhin - FullStack Developer"
           class="rounded-md shadow-antiqueWhite shadow-md object-cover w-full max-w-125" />
-        <div class="w-full max-w-125 flex flex-col justify-center gap-5 lg:px-12">
+        <div class="w-full max-w-125 flex flex-col justify-center gap-5 lg:px-5">
           <p class="text-4xl text-antiqueWhite font-bold">{{ t('name') }}</p>
           <p class="text-3xl text-orange font-bold">{{ t('position') }}</p>
           <div class="flex items-center gap-2 mt-2">
@@ -31,7 +31,7 @@
               <span class="text-lg group-hover:text-antiqueWhite transition-colors duration-300">GitHub</span>
             </a>
           </div>
-          <div class="flex flex-col gap-6 mt-10">
+          <div class="flex flex-col gap-6 mt-8">
             <PdfModal :label="t('viewCV')" :src="CV"
               trigger-class-name="w-full px-4 py-2 border border-antiqueWhite text-antiqueWhite text-xl font-bold rounded-md hover:bg-antiqueWhite hover:text-background transition-colors duration-300 text-center" />
             <a :href="CV" download
