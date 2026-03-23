@@ -16,7 +16,7 @@
           <div v-if="index < navLinks.length - 1" class="border-b border-gray w-full pt-3" />
         </li>
       </ul>
-      <div class="pt-6">
+      <div class="pt-6" @click="onClose">
         <LanguageButton :locale="$i18n.locale" :isMobile="true" :activeSection="activeSection" />
       </div>
     </nav>
@@ -26,9 +26,9 @@
 <script setup lang="ts">
 import { watch } from 'vue'
 import { IoClose } from 'vue-icons-plus/io'
+
 import type { NavLink } from './NavBar.vue'
 import LanguageButton from './LanguageButton.vue'
-
 
 const props = defineProps<{ navLinks: NavLink[], isOpen: boolean, onClose: () => void, activeSection: string }>()
 
