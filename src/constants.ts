@@ -1,9 +1,12 @@
+const recommendations = import.meta.glob('/src/assets/recommendations/*', { eager: true, import: 'default' }) as Record<string, string>
+const r = (file: string) => recommendations[`/src/assets/recommendations/${file}`] ?? ''
+
 export const links = {
   linkedin: 'https://www.linkedin.com/in/dmytro-kotykhin-4683151b',
   telegram: 'https://t.me/Dmytro_Kotykhin',
   github: 'https://github.com/DKotykhin',
   email: 'kotykhin_d@ukr.net',
-};
+}
 
 export const certificates = [
   {
@@ -38,7 +41,7 @@ export const certificates = [
     text: 'cert_8',
     url: 'https://www.englishdom.com/cn/ec5a5f36',
   },
-];
+]
 
 export const jobs_experience = [
   {
@@ -60,10 +63,18 @@ export const jobs_experience = [
       'Figma',
       'Git',
     ],
-    tech_stack_backend: ['Node JS', 'Nest JS', 'Fastify', 'BullMQ', 'Docker', 'Strapi', 'Microservices'],
+    tech_stack_backend: [
+      'Node JS',
+      'Nest JS',
+      'Fastify',
+      'BullMQ',
+      'Docker',
+      'Strapi',
+      'Microservices',
+    ],
     tech_stack_database: ['PostgreSQL', 'MySQL', 'Drizzle', 'Sequelize', 'Redis'],
     examples: ['https://skinswap.com', 'https://www.studybooster.ph'],
-    recommendation_link: '/recommendations/Recommendation_ITSUA.pdf',
+    recommendation_link: r('Recommendation_ITSUA.pdf'),
   },
   {
     company: 'dZENcode',
@@ -91,8 +102,25 @@ export const jobs_experience = [
     company_url: 'https://webxwiz.com/',
     position: 'position_1',
     period: '07.2022 ‐ 01.2024',
-    tech_stack_frontend: ['Next JS', 'Redux', 'SCSS', 'Typescript', 'Material UI', 'Figma', 'Apollo GraphQL'],
-    tech_stack_backend: ['Node JS', 'Express', 'Apollo Server', 'Mongo DB', 'JWT', 'Hygraph', 'AWS', 'Stripe'],
+    tech_stack_frontend: [
+      'Next JS',
+      'Redux',
+      'SCSS',
+      'Typescript',
+      'Material UI',
+      'Figma',
+      'Apollo GraphQL',
+    ],
+    tech_stack_backend: [
+      'Node JS',
+      'Express',
+      'Apollo Server',
+      'Mongo DB',
+      'JWT',
+      'Hygraph',
+      'AWS',
+      'Stripe',
+    ],
     tech_stack_database: ['PostgreSQL', 'TypeORM', 'Redis'],
     examples: ['https://yachtease.com'],
   },
@@ -109,7 +137,7 @@ export const jobs_experience = [
     period: '04.2020 ‐ 07.2022',
     tech_stack_frontend: ['JavaScript', 'HTML', 'CSS', 'Tilda'],
   },
-];
+]
 
 export const projects = [
   {
@@ -139,7 +167,16 @@ export const projects = [
   {
     name: 'YachtEase',
     description: 'project_desc_3',
-    tech_stack: ['Next JS', 'Redux', 'Material UI', 'Figma', 'Node JS', 'Mongo DB', 'AWS', 'Stripe'],
+    tech_stack: [
+      'Next JS',
+      'Redux',
+      'Material UI',
+      'Figma',
+      'Node JS',
+      'Mongo DB',
+      'AWS',
+      'Stripe',
+    ],
     url: 'https://yachtease.co',
   },
   {
@@ -153,7 +190,7 @@ export const projects = [
     name: 'Personal Projects',
     description: 'project_desc_5',
   },
-];
+]
 
 export const microservices = [
   {
@@ -214,7 +251,16 @@ export const microservices = [
   {
     name: 'Notification Service',
     description: 'microservice_desc_6',
-    tech_stack: ['Nest JS', 'TypeScript', 'Docker', 'Nodemailer', 'RabbitMQ', 'Handlebars', 'OpenTelemetry', 'Jest'],
+    tech_stack: [
+      'Nest JS',
+      'TypeScript',
+      'Docker',
+      'Nodemailer',
+      'RabbitMQ',
+      'Handlebars',
+      'OpenTelemetry',
+      'Jest',
+    ],
     github: 'https://github.com/DKotykhin/notification-microservice',
   },
   {
@@ -223,4 +269,4 @@ export const microservices = [
     tech_stack: ['Docker', 'Adminer', 'RabbitMQ', 'Loki', 'Jaeger', 'Prometheus', 'Grafana'],
     github: 'https://github.com/DKotykhin/docker-common',
   },
-];
+]
