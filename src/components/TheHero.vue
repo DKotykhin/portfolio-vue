@@ -1,5 +1,5 @@
 <template>
-  <section id="home" aria-label="Hero" class="min-h-screen flex items-center justify-center pt-16"
+  <section id="home" aria-label="Hero" class="flex items-center justify-center pt-16" style="min-height: 100vh; min-height: 100svh;"
     :style="{ backgroundImage: `url(${bgImage})` }">
     <div class="flex flex-col gap-12 items-center sm:items-start w-full max-w-308 mx-auto px-4 md:px-8 bg-transparent">
       <h1

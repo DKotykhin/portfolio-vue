@@ -7,6 +7,10 @@ import router from './router'
 import Toast from 'vue-toastification'
 import 'vue-toastification/dist/index.css'
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual'
+}
+
 const app = createApp(App)
 
 app.use(i18n)
