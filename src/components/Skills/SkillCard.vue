@@ -1,7 +1,7 @@
 <template>
   <div :class="cardClass">
     <div class="flex flex-col items-center gap-2 p-4">
-      <img :src="icon" :alt="name" width="64" height="64" />
+      <img :src="icon" alt="" aria-hidden="true" width="64" height="64" />
       <span class="text-antiqueWhite">{{ name }}</span>
     </div>
   </div>

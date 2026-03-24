@@ -54,6 +54,14 @@ const SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID || ''
 const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID || ''
 const PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY || ''
 
+if (import.meta.env.DEV) {
+  const missing = ['VITE_EMAIL_SERVICE_ID', 'VITE_EMAIL_TEMPLATE_ID', 'VITE_EMAIL_PUBLIC_KEY']
+    .filter((key) => !import.meta.env[key])
+  if (missing.length) {
+    console.warn(`[ContactForm] Missing env vars: ${missing.join(', ')}. Contact form will not work.`)
+  }
+}
+
 const onSubmit = handleSubmit(async (data) => {
   isPending.value = true
   try {

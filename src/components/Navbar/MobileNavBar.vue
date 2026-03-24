@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from 'vue'
+import { watch, onUnmounted } from 'vue'
 import { IoClose } from 'vue-icons-plus/io'
 
 import type { NavLink } from './NavBar.vue'
@@ -34,6 +34,10 @@ const props = defineProps<{ navLinks: NavLink[], isOpen: boolean, onClose: () =>
 
 watch(() => props.isOpen, (open) => {
   document.body.classList.toggle('overflow-hidden', open)
+})
+
+onUnmounted(() => {
+  document.body.classList.remove('overflow-hidden')
 })
 </script>
 

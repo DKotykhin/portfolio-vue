@@ -43,4 +43,17 @@ onMounted(() => {
     scale: 1;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .section-title {
+    opacity: 1;
+    scale: 1;
+  }
+
+  .fade-in {
+    animation: none;
+    opacity: 1;
+    scale: 1;
+  }
+}
 </style>

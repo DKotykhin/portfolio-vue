@@ -3,7 +3,7 @@
     <div class="px-4 md:px-8 w-full max-w-308 mx-auto pb-10">
       <SectionTitle :title="t('title')" />
       <div class="space-y-10">
-        <div v-for="(job, index) in jobs_experience" :key="index">
+        <div v-for="(job, index) in jobs_experience" :key="job.company">
           <p class="text-2xl font-semibold mb-2">
             <a v-if="job.company_url" :href="job.company_url" target="_blank" rel="noopener noreferrer"
               class="text-orange hover:underline">{{ job.company }}</a>
@@ -40,7 +40,7 @@
           <div class="mt-2 md:text-lg">
             <p class="font-medium text-antiqueWhite mb-1 whitespace-nowrap">{{ t('results') }}:</p>
             <ul class="list-disc list-inside">
-              <li v-for="(result, i) in (tm(`Experience.job_${index + 1}.results`) as string[])" :key="i">
+              <li v-for="(result, i) in getJobResults(index)" :key="i">
                 {{ result }}
               </li>
             </ul>
@@ -79,6 +79,11 @@ import PdfModal from './PdfModal.vue'
 
 const { t: $t, tm } = useI18n()
 const t = (key: string) => $t(`Experience.${key}`)
+
+function getJobResults(index: number): string[] {
+  const results = tm(`Experience.job_${index + 1}.results`)
+  return Array.isArray(results) ? results : []
+}
 </script>
 
 <style scoped></style>
