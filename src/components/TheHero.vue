@@ -1,6 +1,7 @@
 <template>
-  <section id="home" aria-label="Hero" class="flex items-center justify-center pt-16" style="min-height: 100vh; min-height: 100svh;"
-    :style="{ backgroundImage: `url(${bgImage})` }">
+  <section id="home" aria-label="Hero"
+    class="flex items-center justify-center pt-16 bg-[url('/bg-mobile.avif')] md:bg-[url('/bg-full.avif')]"
+    style="min-height: 100vh; min-height: 100svh;">
     <div class="flex flex-col gap-12 items-center sm:items-start w-full max-w-308 mx-auto px-4 md:px-8 bg-transparent">
       <h1
         class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-center sm:text-start mb-12 text-antiqueWhite leading-20">
@@ -18,7 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import bgImage from '@/assets/images/bg-2.avif'
 import { useI18n } from 'vue-i18n'
 
 const { t: $t } = useI18n()
