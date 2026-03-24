@@ -10,7 +10,8 @@
       </button>
       <ul class="flex flex-col gap-4">
         <li v-for="(link, index) in navLinks" :key="link.id" class="w-full text-center">
-          <a :href="link.href" @click="onClose" class="text-white text-xl">
+          <a :href="link.href" @click="onClose"
+            :class="[activeSection === link.id ? 'text-orange' : 'text-white', 'text-xl']">
             {{ link.name }}
           </a>
           <div v-if="index < navLinks.length - 1" class="border-b border-gray w-full pt-3" />
