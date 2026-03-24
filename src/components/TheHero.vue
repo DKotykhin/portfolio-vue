@@ -1,6 +1,5 @@
 <template>
-  <section id="home" aria-label="Hero"
-    class="flex items-center justify-center pt-16 bg-[url('/bg-mobile.avif')] md:bg-[url('/bg-full.avif')]"
+  <section id="home" aria-label="Hero" class="flex items-center justify-center pt-16"
     style="min-height: 100vh; min-height: 100svh;">
     <div class="flex flex-col gap-12 items-center sm:items-start w-full max-w-308 mx-auto px-4 md:px-8 bg-transparent">
       <h1
@@ -20,6 +19,8 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import bgImageDesktop from '@/assets/images/bg-full.avif'
+import bgImageMobile from '@/assets/images/bg-mobile.avif'
 
 const { t: $t } = useI18n()
 const t = (key: string) => $t(`HomePage.${key}`)
@@ -57,6 +58,16 @@ const t = (key: string) => $t(`HomePage.${key}`)
   .fade-in {
     animation: none;
     opacity: 1;
+  }
+}
+
+section {
+  background-image: v-bind("'url(' + bgImageMobile + ')'");
+}
+
+@media (min-width: 768px) {
+  section {
+    background-image: v-bind("'url(' + bgImageDesktop + ')'");
   }
 }
 </style>
