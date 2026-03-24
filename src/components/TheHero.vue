@@ -21,15 +21,6 @@
 import bgImage from '@/assets/images/bg-2.avif'
 import { useI18n } from 'vue-i18n'
 
-// Preload the LCP background image so the browser fetches it as early as possible.
-// Done here (not index.html) because Vite adds a content hash to the filename at build time.
-const preloadLink = document.createElement('link')
-preloadLink.rel = 'preload'
-preloadLink.as = 'image'
-preloadLink.type = 'image/avif'
-preloadLink.href = bgImage
-document.head.appendChild(preloadLink)
-
 const { t: $t } = useI18n()
 const t = (key: string) => $t(`HomePage.${key}`)
 </script>
