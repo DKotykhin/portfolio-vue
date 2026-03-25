@@ -16,67 +16,67 @@
         <button
           ref="closeButtonRef"
           @click="closeModal"
-          class="text-antiqueWhite text-2xl font-bold px-4 py-1 hover:text-orange transition-colors duration-300"
+          class="text-antiqueWhite hover:text-orange px-4 py-1 text-2xl font-bold transition-colors duration-300"
           aria-label="Close PDF viewer"
         >
           ✕
         </button>
       </div>
-      <iframe ref="iframeRef" :src="src" class="flex-1 w-full" :title="label" tabindex="0" />
+      <iframe ref="iframeRef" :src="src" class="w-full flex-1" :title="label" tabindex="0" />
     </div>
   </Teleport>
 </template>
 
 <script setup lang="ts">
-import { ref, nextTick } from 'vue';
+import { ref, nextTick } from 'vue'
 
 const props = defineProps<{
-  label: string;
-  src: string;
-  triggerClassName?: string;
-}>();
+  label: string
+  src: string
+  triggerClassName?: string
+}>()
 
-const open = ref(false);
-const closeButtonRef = ref<HTMLButtonElement | null>(null);
-const iframeRef = ref<HTMLIFrameElement | null>(null);
+const open = ref(false)
+const closeButtonRef = ref<HTMLButtonElement | null>(null)
+const iframeRef = ref<HTMLIFrameElement | null>(null)
 
 function handleClick() {
   if (window.innerWidth < 768) {
-    window.open(props.src, '_blank');
+    window.open(props.src, '_blank')
   } else {
-    open.value = true;
+    open.value = true
     nextTick(() => {
-      closeButtonRef.value?.focus();
-    });
+      closeButtonRef.value?.focus()
+    })
   }
 }
 
 function closeModal() {
-  open.value = false;
+  open.value = false
 }
 
 function handleKeydown(e: KeyboardEvent) {
   if (e.key === 'Escape') {
-    closeModal();
-    return;
+    closeModal()
+    return
   }
 
   if (e.key === 'Tab') {
-    const focusable = [closeButtonRef.value, iframeRef.value].filter(Boolean) as HTMLElement[];
-    if (focusable.length < 2) return;
+    const focusable = [closeButtonRef.value, iframeRef.value].filter(Boolean) as HTMLElement[]
+    if (focusable.length < 2) return
 
-    const first = focusable[0]!;
-    const last = focusable[focusable.length - 1]!;
+    const first = focusable[0]!
+    const last = focusable[focusable.length - 1]!
 
     if (e.shiftKey) {
       if (document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
+        e.preventDefault()
+        last.focus()
       }
     } else {
       if (document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
+        e.preventDefault()
+        first.focus()
       }
     }
   }

@@ -1,4 +1,7 @@
-const icons = import.meta.glob('/src/assets/skills/*', { eager: true, import: 'default' }) as Record<string, string>
+const icons = import.meta.glob('/src/assets/skills/*', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>
 const i = (file: string) => icons[`/src/assets/skills/${file}`] ?? ''
 
 export const frontendSkills = [

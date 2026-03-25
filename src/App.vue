@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import TheFooter from './components/TheFooter.vue';
-import NavBar from './components/Navbar/NavBar.vue';
 import { RouterView } from 'vue-router';
 
+import NavBar from './components/Navbar/NavBar.vue';
+import TheFooter from './components/TheFooter.vue';
 </script>
 
 <template>
-  <div class="bg-background min-h-screen flex flex-col text-lightGray">
+  <div class="bg-background text-lightGray flex min-h-screen flex-col">
     <a href="#home"
-      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-orange focus:text-background focus:rounded-lg focus:font-bold">
+      class="focus:bg-orange focus:text-background sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:rounded-lg focus:px-4 focus:py-2 focus:font-bold">
       Skip to content
     </a>
     <NavBar />

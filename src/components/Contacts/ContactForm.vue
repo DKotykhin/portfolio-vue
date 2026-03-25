@@ -2,26 +2,49 @@
   <form @submit="onSubmit" class="mt-4 space-y-6">
     <div class="flex flex-col gap-1">
       <label for="name" class="sr-only">{{ t('Contacts.form.name') }}</label>
-      <input id="name" v-model.trim="name" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
-        :placeholder="t('Contacts.form.name')" />
+      <input
+        id="name"
+        v-model.trim="name"
+        class="bg-grey text-antiqueWhite rounded-sm px-4 py-2"
+        :placeholder="t('Contacts.form.name')"
+      />
       <small v-if="nameError" class="text-red-500">{{ nameError }}</small>
     </div>
     <div class="flex flex-col gap-1">
       <label for="email" class="sr-only">{{ t('Contacts.form.email') }}</label>
-      <input id="email" v-model.trim="email" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
-        :placeholder="t('Contacts.form.email')" />
+      <input
+        id="email"
+        v-model.trim="email"
+        class="bg-grey text-antiqueWhite rounded-sm px-4 py-2"
+        :placeholder="t('Contacts.form.email')"
+      />
       <small v-if="emailError" class="text-red-500">{{ emailError }}</small>
     </div>
     <div class="flex flex-col gap-1">
       <label for="message" class="sr-only">{{ t('Contacts.form.message') }}</label>
-      <textarea id="message" v-model.trim="message" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
-        :placeholder="t('Contacts.form.message')" rows="5" />
+      <textarea
+        id="message"
+        v-model.trim="message"
+        class="bg-grey text-antiqueWhite rounded-sm px-4 py-2"
+        :placeholder="t('Contacts.form.message')"
+        rows="5"
+      />
       <small v-if="messageError" class="text-red-500">{{ messageError }}</small>
     </div>
-    <button type="submit" :disabled="isPending" :class="['w-full px-4 py-2 min-h-11 bg-grey rounded-sm transition-colors duration-300 text-lg font-bold text-antiqueWhite flex items-center justify-center',
-      isPending ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:bg-orange hover:text-grey']">
-      <span v-if="isPending"
-        class="inline-block w-5 h-5 border-2 border-antiqueWhite border-t-transparent rounded-full animate-spin" />
+    <button
+      type="submit"
+      :disabled="isPending"
+      :class="[
+        'bg-grey text-antiqueWhite flex min-h-11 w-full items-center justify-center rounded-sm px-4 py-2 text-lg font-bold transition-colors duration-300',
+        isPending
+          ? 'cursor-not-allowed opacity-50'
+          : 'hover:bg-orange hover:text-grey cursor-pointer',
+      ]"
+    >
+      <span
+        v-if="isPending"
+        class="border-antiqueWhite inline-block h-5 w-5 animate-spin rounded-full border-2 border-t-transparent"
+      />
       <span v-else>{{ t('Contacts.form.submit') }}</span>
     </button>
   </form>
@@ -55,10 +78,15 @@ const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID || ''
 const PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY || ''
 
 if (import.meta.env.DEV) {
-  const missing = ['VITE_EMAIL_SERVICE_ID', 'VITE_EMAIL_TEMPLATE_ID', 'VITE_EMAIL_PUBLIC_KEY']
-    .filter((key) => !import.meta.env[key])
+  const missing = [
+    'VITE_EMAIL_SERVICE_ID',
+    'VITE_EMAIL_TEMPLATE_ID',
+    'VITE_EMAIL_PUBLIC_KEY',
+  ].filter((key) => !import.meta.env[key])
   if (missing.length) {
-    console.warn(`[ContactForm] Missing env vars: ${missing.join(', ')}. Contact form will not work.`)
+    console.warn(
+      `[ContactForm] Missing env vars: ${missing.join(', ')}. Contact form will not work.`,
+    )
   }
 }
 

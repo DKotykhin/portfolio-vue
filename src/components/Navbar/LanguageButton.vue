@@ -2,8 +2,10 @@
   <RouterLink
     :to="{ path: locale === 'en' ? '/ua' : '/', hash: '#' + activeSection }"
     :aria-label="locale === 'en' ? 'Switch to Ukrainian' : 'Switch to English'"
-    class="capitalize flex justify-center items-center py-1 min-w-12 rounded-md text-md border border-lightGray hover:brightness-125 transition-discrete duration-300"
-    @mouseenter="hovered = true" @mouseleave="hovered = false">
+    class="text-md border-lightGray flex min-w-12 items-center justify-center rounded-md border py-1 capitalize transition-discrete duration-300 hover:brightness-125"
+    @mouseenter="hovered = true"
+    @mouseleave="hovered = false"
+  >
     {{ hovered || isMobile ? (locale === 'en' ? 'Ua' : 'En') : locale }}
   </RouterLink>
 </template>
@@ -12,7 +14,7 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 
-defineProps<{ locale: string, isMobile: boolean, activeSection: string }>()
+defineProps<{ locale: string; isMobile: boolean; activeSection: string }>()
 const hovered = ref(false)
 </script>
 

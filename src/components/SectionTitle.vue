@@ -1,5 +1,8 @@
 <template>
-  <h2 ref="titleRef" class="section-title text-4xl font-bold text-antiqueWhite flex justify-center px-4 py-10">
+  <h2
+    ref="titleRef"
+    class="section-title text-antiqueWhite flex justify-center px-4 py-10 text-4xl font-bold"
+  >
     {{ title }}
   </h2>
 </template>
@@ -19,7 +22,7 @@ onMounted(() => {
         observer.disconnect()
       }
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 },
   )
 
   if (titleRef.value) observer.observe(titleRef.value)

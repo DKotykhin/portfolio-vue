@@ -1,17 +1,26 @@
 <template>
-  <section id="home" aria-label="Hero" class="flex items-center justify-center pt-16"
-    style="min-height: 100vh; min-height: 100svh;">
-    <div class="flex flex-col gap-12 items-center sm:items-start w-full max-w-308 mx-auto px-4 md:px-8 bg-transparent">
+  <section
+    id="home"
+    aria-label="Hero"
+    class="flex items-center justify-center pt-16"
+    style="min-height: 100vh; min-height: 100svh"
+  >
+    <div
+      class="mx-auto flex w-full max-w-308 flex-col items-center gap-12 bg-transparent px-4 sm:items-start md:px-8"
+    >
       <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-center sm:text-start mb-12 text-antiqueWhite leading-20">
+        class="text-antiqueWhite mb-12 text-center text-3xl leading-20 font-semibold sm:text-start sm:text-4xl md:text-5xl lg:text-7xl"
+      >
         <span class="fade-in stagger-1 block pb-14">{{ t('title') }}</span>
         <span class="fade-in stagger-2">{{ t('line_1') }}</span>
         <br />
         <span class="fade-in stagger-3 text-orange">{{ t('line_2') }}</span>
       </h1>
-      <a href="#about-me"
-        class="fade-in stagger-4 inline-block text-center text-orange border border-orange px-6 py-3 rounded-lg hover:bg-orange hover:text-background transition-colors duration-300 cursor-pointer">
-        <span class="text-xl sm:text-2xl font-bold">{{ t('button') }}</span>
+      <a
+        href="#about-me"
+        class="fade-in stagger-4 text-orange border-orange hover:bg-orange hover:text-background inline-block cursor-pointer rounded-lg border px-6 py-3 text-center transition-colors duration-300"
+      >
+        <span class="text-xl font-bold sm:text-2xl">{{ t('button') }}</span>
       </a>
     </div>
   </section>
@@ -41,7 +50,7 @@ const t = (key: string) => $t(`HomePage.${key}`)
 }
 
 .stagger-3 {
-  animation-delay: 2.0s;
+  animation-delay: 2s;
 }
 
 .stagger-4 {
