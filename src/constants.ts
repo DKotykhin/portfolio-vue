@@ -1,4 +1,7 @@
-const recommendations = import.meta.glob('/src/assets/recommendations/*', { eager: true, import: 'default' }) as Record<string, string>
+const recommendations = import.meta.glob('/src/assets/recommendations/*', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>
 const r = (file: string) => recommendations[`/src/assets/recommendations/${file}`] ?? ''
 
 export const links = {
@@ -7,6 +10,8 @@ export const links = {
   github: 'https://github.com/DKotykhin',
   email: 'kotykhin_d@ukr.net',
 }
+
+export const coreSkills = ['React', 'Next.js', 'TypeScript', 'Node.js', 'Nest JS']
 
 export const certificates = [
   {
@@ -111,17 +116,8 @@ export const jobs_experience = [
       'Figma',
       'Apollo GraphQL',
     ],
-    tech_stack_backend: [
-      'Node JS',
-      'Express',
-      'Apollo Server',
-      'Mongo DB',
-      'JWT',
-      'Hygraph',
-      'AWS',
-      'Stripe',
-    ],
-    tech_stack_database: ['PostgreSQL', 'TypeORM', 'Redis'],
+    tech_stack_backend: ['Node JS', 'Express', 'Apollo Server', 'JWT', 'Hygraph', 'AWS', 'Stripe'],
+    tech_stack_database: ['PostgreSQL', 'Mongo DB', 'Redis'],
     examples: ['https://yachtease.com'],
   },
   {

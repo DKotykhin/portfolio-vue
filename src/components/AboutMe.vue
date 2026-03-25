@@ -51,16 +51,12 @@ import { FiMapPin } from 'vue-icons-plus/fi'
 import { CiLinkedin } from 'vue-icons-plus/ci'
 import { FaGithub } from 'vue-icons-plus/fa'
 
-import { links } from '../constants'
 import photo from '@/assets/images/photo.avif'
 import CV from '@/assets/cv/Dmytro_Kotykhin_CV.pdf'
+import { links, coreSkills } from '../constants'
 import SectionTitle from './SectionTitle.vue'
 import PdfModal from './PdfModal.vue'
 
 const { t: $t } = useI18n()
 const t = (key: string) => $t(`AboutMe.${key}`)
-
-const coreSkills = ['React', 'Next.js', 'TypeScript', 'Node.js', 'Nest JS']
 </script>
-
-<style scoped></style>

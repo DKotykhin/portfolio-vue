@@ -49,5 +49,3 @@ const t = (key: string) => $t(`Background.${key}`)
 const languages = ['language1', 'language2', 'language3', 'language4'] as const
 const hobbies = ['hobby1', 'hobby2', 'hobby3'] as const
 </script>
-
-<style scoped></style>
