@@ -19,7 +19,7 @@
             </div>
           </div>
           <p class="md:text-lg lg:mt-6">{{ t('description') }}</p>
-          <div class="flex items-center gap-8 grow">
+          <nav aria-label="Social links" class="flex items-center gap-8 grow">
             <a :href="links.linkedin" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group">
               <CiLinkedin aria-hidden="true" color="#faebd7"
                 class="cursor-pointer group-hover:scale-110 transition-transform duration-300 w-9 h-9" />
@@ -30,7 +30,7 @@
                 class="cursor-pointer group-hover:scale-110 transition-transform duration-300 w-8 h-8" />
               <span class="text-lg group-hover:text-antiqueWhite transition-colors duration-300">GitHub</span>
             </a>
-          </div>
+          </nav>
           <div class="flex flex-col gap-6 mt-8">
             <PdfModal :label="t('viewCV')" :src="CV"
               trigger-class-name="w-full px-4 py-2 border border-antiqueWhite text-antiqueWhite text-xl font-bold rounded-md hover:bg-antiqueWhite hover:text-background transition-colors duration-300 text-center" />

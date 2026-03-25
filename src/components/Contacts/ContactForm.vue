@@ -2,19 +2,19 @@
   <form @submit="onSubmit" class="mt-4 space-y-6">
     <div class="flex flex-col gap-1">
       <label for="name" class="sr-only">{{ t('Contacts.form.name') }}</label>
-      <input id="name" v-model="name" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
+      <input id="name" v-model.trim="name" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
         :placeholder="t('Contacts.form.name')" />
       <small v-if="nameError" class="text-red-500">{{ nameError }}</small>
     </div>
     <div class="flex flex-col gap-1">
       <label for="email" class="sr-only">{{ t('Contacts.form.email') }}</label>
-      <input id="email" v-model="email" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
+      <input id="email" v-model.trim="email" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
         :placeholder="t('Contacts.form.email')" />
       <small v-if="emailError" class="text-red-500">{{ emailError }}</small>
     </div>
     <div class="flex flex-col gap-1">
       <label for="message" class="sr-only">{{ t('Contacts.form.message') }}</label>
-      <textarea id="message" v-model="message" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
+      <textarea id="message" v-model.trim="message" class="bg-grey px-4 py-2 rounded-sm text-antiqueWhite"
         :placeholder="t('Contacts.form.message')" rows="5" />
       <small v-if="messageError" class="text-red-500">{{ messageError }}</small>
     </div>

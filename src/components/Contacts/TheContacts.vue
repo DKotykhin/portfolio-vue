@@ -13,8 +13,9 @@
             <ContactForm />
           </div>
         </div>
-        <div class="max-w-125 w-full space-y-6">
-          <a :href="`mailto:${links.email}`" :aria-label="`Send email to ${links.email}`" class="w-fit flex items-center gap-3 group">
+        <nav aria-label="Contact links" class="max-w-125 w-full space-y-6">
+          <a :href="`mailto:${links.email}`" :aria-label="`Send email to ${links.email}`"
+            class="w-fit flex items-center gap-3 group">
             <MdOutlineEmail aria-hidden="true" color="#faebd7"
               class="cursor-pointer group-hover:scale-110 transition-transform duration-300 w-8 h-8" />
             <span class="text-lg group-hover:text-antiqueWhite transition-colors duration-300">
@@ -33,7 +34,7 @@
               class="cursor-pointer group-hover:scale-110 transition-transform duration-300 w-9 h-9" />
             <span class="text-lg group-hover:text-antiqueWhite transition-colors duration-300">LinkedIn</span>
           </a>
-        </div>
+        </nav>
       </div>
     </div>
   </section>
